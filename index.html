@@ -34,19 +34,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="./client/index.tsx" type="module">
-      const toggle_btn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
-
-        toggle_btn.onclick = function () {
-            dropDownMenu.classNameList.toggle('open')
-        const isOpen = dropDownMenu.classNameList.contains('open')
-
-        toggleBtnIcon.classNameList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-        }
-    </script>
+    <script src="./client/index.tsx" type="module"></script>
   </body>
 </html>
