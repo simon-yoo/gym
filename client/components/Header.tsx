@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Header = () =>{
     return ( <div className="header">
     <nav>
@@ -5,11 +7,11 @@ const Header = () =>{
             <h1>WORLD GYM-</h1>
            <i className="fa-solid fa-xmark"></i>
             <ul className="links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="membership.html">MEMBERSHIP</a></li>
-                <li><a href="location.html">LOCATION</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <Link to={'/'}><li>HOME</li></Link>
+                <Link to={'about'}><li>About</li></Link>
+                <Link to={'membership'}><li>Membership</li></Link> 
+                <Link to={'location'}><li>Location</li></Link> 
+                <Link to={'contact'}><li>Contact</li></Link>
             </ul>
             <div className="toggle_btn">
                 <i className="fa-solid fa-bars"></i>
