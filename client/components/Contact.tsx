@@ -1,4 +1,10 @@
 const Contact = () => {
+
+const handleSubmit =()=>{
+    console.log('submit')
+
+}
+
     return (
      <>
      <div>
@@ -9,7 +15,7 @@ const Contact = () => {
                 <h3>Register Form</h3>
                 <hr/>
                 <br/>
-                <form >    
+                <form  >    
                 <label htmlFor="firstName" id="firstName"> First Name:</label>
                 <input type="text" id="firstName" placeholder="Please enter your first name" name="firstName" className="field"/>
                 <label htmlFor="lastName" id="lastName"> Last Name:</label>
@@ -21,7 +27,7 @@ const Contact = () => {
                     placeholder="Please enter your phone number" className="field"/>
                 <label htmlFor="age" id="age">Date of Birth:</label>
                 <input type="date" id="age" name="age" value="2000-01-01" min="1940-01-01" max="2022-12-31" className="field"/>
-                <button className="btn">Send</button>
+                <button  onSubmit={handleSubmit} className="btn">Send</button>
                 </form>
             </div>
         </div>
