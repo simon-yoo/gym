@@ -78,7 +78,7 @@ a {
 }
 
 .text-box {
-  width: 90%;
+  width: 60%;
   color: #ced4da;
   position: absolute;
   top: 60%;
@@ -157,14 +157,14 @@ a {
   content: ' ';
   width: 0%;
   height: 1px;
-  margin: auto;
   transition: 0.3s;
   background: #fff;
-  display: block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .drop-link:hover::after {
-  width: 100%;
+  width: 15%;
 }
 
 @media (max-width: 1300px) {
@@ -191,6 +191,11 @@ a {
   }
   .row .facility-col img {
     height: 350px;
+  }
+}
+@media (min-width: 1300px) {
+  .dropdown_menu {
+    visibility: hidden;
   }
 }
 

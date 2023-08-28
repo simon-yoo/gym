@@ -25,7 +25,6 @@ import Contact from './components/Contact'
                   <Route path="location" element={<Location/>}/>
                   <Route path="membership" element={<Membership/>}/>
                   <Route path="contact" element={<Contact/>}/>
-                
                 </Route>
             )
         )}

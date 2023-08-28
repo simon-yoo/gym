@@ -37,7 +37,6 @@ function Header(){
     </nav>
    
     <div className="dropdown_menu">
-
         <Link to={'/'}><li className="drop-link">HOME</li></Link>
         <Link to={'about'}><li className="drop-link">About</li></Link>
         <Link to={'membership'}><li className="drop-link">Membership</li></Link> 
