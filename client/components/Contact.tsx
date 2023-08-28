@@ -10,7 +10,7 @@ const handleSubmit =()=>{
      <div>
         <div className="container">
         <div className="container-box">
-        <div className="left"><img src="photos/inspiration/ready.avif" alt=""/></div>
+        <div className="left"><img src="/client/public/photos/inspiration/ready.avif" alt=""/></div>
             <div className="right">
                 <h3>Register Form</h3>
                 <hr/>

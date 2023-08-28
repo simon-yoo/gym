@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom"
 
-const Header = () =>{
+function Header(){
+
+    function handleClick(){
+    const toggle_btn = document.querySelector('.toggle_btn') as HTMLElement;
+    const toggleBtnIcon = document.querySelector('.toggle_btn i') as HTMLElement;
+    const dropDownMenu = document.querySelector('.dropdown_menu') as HTMLElement;
+    
+    toggle_btn.onclick = function () {
+      dropDownMenu.classList.toggle('open');
+      const isOpen = dropDownMenu.classList.contains('open');
+    
+      toggleBtnIcon.className = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    }
+    }
     return ( <div className="header">
     <nav>
         <div className="navbar">
             <h1>WORLD GYM-</h1>
-           <i className="fa-solid fa-xmark"></i>
+           {/* <i className="fa-solid fa-xmark" aria-hidden="true"></i> */}
             <ul className="links">
                 <Link to={'/'}><li>HOME</li></Link>
                 <Link to={'about'}><li>About</li></Link>
@@ -14,19 +29,20 @@ const Header = () =>{
                 <Link to={'contact'}><li>Contact</li></Link>
             </ul>
             <div className="toggle_btn">
-                <i className="fa-solid fa-bars"></i>
+                <i onClick={handleClick}className="fa-solid fa-bars"></i>
             </div>
         </div>
         
         
     </nav>
-
+   
     <div className="dropdown_menu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="membership.html">MEMBERSHIP</a></li>
-        <li><a href="location.html">LOCATION</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+
+        <Link to={'/'}><li className="drop-link">HOME</li></Link>
+        <Link to={'about'}><li className="drop-link">About</li></Link>
+        <Link to={'membership'}><li className="drop-link">Membership</li></Link> 
+        <Link to={'location'}><li className="drop-link">Location</li></Link> 
+        <Link to={'contact'}><li className="drop-link">Contact</li></Link>
     </div>
 
     <div className="text-box">
