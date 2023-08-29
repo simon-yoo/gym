@@ -138,7 +138,7 @@ a {
 .dropdown_menu.open {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 430px;
   padding-top: 1.5rem;
   margin-top: 40px;
 }
@@ -790,4 +790,55 @@ iframe {
   width: 80%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+/* // Login */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 40px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.input-container input {
+  width: 180px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+}
+
+#email::placeholder {
+  padding-left: 120px;
+  font-size: 15px;
+}
+
+#password::placeholder {
+  padding-left: 80px;
+  font-size: 15px;
+}
+.login-btn {
+  width: 80px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 0px 5px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+  transition: 1s;
+}
+
+.login-btn:hover {
+  background-color: #403d39;
+  color: #fff;
 }

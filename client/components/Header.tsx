@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import Login from "./Login";
 function Header(){
 
     function handleClick(){
@@ -18,7 +18,7 @@ function Header(){
     }
     return ( <div className="header">
     <nav>
-        <div className="navbar">
+        < div className="navbar">
             <h1>WORLD GYM-</h1>
            {/* <i className="fa-solid fa-xmark" aria-hidden="true"></i> */}
             <ul className="links">
@@ -28,6 +28,7 @@ function Header(){
                 <Link to={'location'}><li>Location</li></Link> 
                 <Link to={'contact'}><li>Contact</li></Link>
             </ul>
+           
             <div className="toggle_btn">
                 <i onClick={handleClick}className="fa-solid fa-bars"></i>
             </div>
@@ -42,6 +43,7 @@ function Header(){
         <Link to={'membership'}><li className="drop-link">Membership</li></Link> 
         <Link to={'location'}><li className="drop-link">Location</li></Link> 
         <Link to={'contact'}><li className="drop-link">Contact</li></Link>
+        <Login/>
     </div>
 
     <div className="text-box">
