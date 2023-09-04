@@ -51,7 +51,7 @@ function Header(){
         <p>
             We are no.1 GYM all around the WORLD! <br/> We give you Motivation, Inspiration and the Result!
         </p>
-        <a href="" className="btn-contact">Contact Us To Know More</a>
+        <Link to={'/contact'} className="btn-contact">Contact Us To Know More</Link>
     </div>
 
 </div>)

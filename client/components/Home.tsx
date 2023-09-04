@@ -7,25 +7,30 @@ const Home= () => {
             Here are our offers fot YOU!
         </p>
         <div className="row">
-            <div className="member-col1">
-                <h3>BRONZE</h3>
+            <a  className="member-col1" href="/membership"><div >
+                <h3 className="membership-h3">BRONZE</h3>
                 <p>$12.99 24hrs ANYTIME</p>
             </div>
+            </a>
             <div className="vtcl"></div>
-            <div className="member-col2">
-                <h3>SILVER</h3>
+            <a className="member-col2" href="/membership">
+            <div >
+                <h3 className="membership-h3">SILVER</h3>
                 <p>$15.99 24hrs ANYTIME <br/> with free use of Massage chair and MORE!
                 </p>
             </div>
+            </a>
             <div className="vtcl"></div>
-            <div className="member-col3">
-                <h3>GOLD</h3>
+            <a className="member-col3" href="/membership">
+            <div >
+                <h3 className="membership-h3">GOLD</h3>
                 <p>$20.99 24hrs ANYTIME <br/> with Free use of Massage Chair, <br/> Free WIFI, Access to Recovery Room
                     <br/> and
                     MORE!
 
                 </p>
             </div>
+            </a>
         </div>
     </div>
 
@@ -63,32 +68,37 @@ const Home= () => {
         <h3>Our Locations</h3>
         <p>We Are Everywhere!</p>
         <div className="column">
+            <a href="/location">
             <div className="location-col">
                 <img src="/client/public/photos/location/newyork.jpeg"/>
                 <h3>NEW YORK</h3>
                 <p>Where we have started! No.1 biggest gym in the world!</p>
                 <hr/>
             </div>
+            </a>
+            <a href="/location">
             <div className="location-col">
                 <img src="/client/public/photos/location/seoul3.jpeg"/>
                 <h3>SEOUL</h3>
                 <p>No.1 biggest gym in Asia! with most memberships enrolled!</p>
                 <hr/>
             </div>
+            </a>
+            <a href="/location">
             <div className="location-col">
                 <img src="/client/public/photos/location/paris1.jpeg"/>
                 <h3>PARIS</h3>
                 <p>Our first gym in Europe! Biggest gym in Europe!</p>
                 <hr/>
             </div>
-
+            </a>
         </div>
     </div>
 
 
     <div className="contact">
         <h2>Contact us if you want to join our team <br/> Anywhere from the world</h2>
-        <a href="" className="btn-contact">CONTACT US</a>
+        <a href="/contact" className="btn-contact">CONTACT US</a>
     </div>
     </>
     )

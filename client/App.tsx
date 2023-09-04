@@ -11,7 +11,7 @@ import About from './components/About'
 import Membership from './components/Membership'
 import Location from './components/Location'
 import Contact from './components/Contact'
-
+import Thanks from './components/Thanks'
 
   function App(){
     
@@ -25,6 +25,7 @@ import Contact from './components/Contact'
                   <Route path="location" element={<Location/>}/>
                   <Route path="membership" element={<Membership/>}/>
                   <Route path="contact" element={<Contact/>}/>
+                  <Route path="thanks" element={<Thanks/>}/>
                 </Route>
             )
         )}

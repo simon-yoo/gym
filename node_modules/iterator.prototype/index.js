@@ -3,7 +3,6 @@
 var GetIntrinsic = require('get-intrinsic');
 var gPO = require('reflect.getprototypeof');
 var hasSymbols = require('has-symbols');
-var hasToStringTag = require('has-tostringtag');
 var define = require('define-properties');
 
 var arrayIterProto = GetIntrinsic('%ArrayIteratorPrototype%', true);
@@ -20,15 +19,11 @@ if (hasSymbols()) {
 	};
 
 	if (!(Symbol.iterator in result)) {
+		// needed when result === iterProto, or, node 0.11.15 - 3
 		defined[Symbol.iterator] = function () {
 			return this;
 		};
 		predicates[Symbol.iterator] = trueThunk;
-	}
-
-	if (hasToStringTag() && !(Symbol.toStringTag in result)) {
-		defined[Symbol.toStringTag] = 'Iterator';
-		predicates[Symbol.toStringTag] = trueThunk;
 	}
 
 	define(result, defined, predicates);

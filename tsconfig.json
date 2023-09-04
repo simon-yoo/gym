@@ -11,6 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "allowImportingTsExtensions": true,
+    "allowJs": true,
     "skipLibCheck": true
   }
 }

@@ -1,7 +1,7 @@
 const About =() => {
     return (
         <section className="about-us">
-        <div className="row">
+        <div className="about-row">
             <div className="about-col">
                 <h2>We are the world's best GYM</h2>
                 <p>We offer the most open, inclusive, empathetic, supportive fitness experience to every member at every

@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1](https://github.com/ljharb/Iterator.prototype/compare/v1.1.0...v1.1.1) - 2023-08-30
+
+### Commits
+
+- [Fix] stop mutating node 4+ Iterator.prototype with Symbol.toStringTag [`74e9560`](https://github.com/ljharb/Iterator.prototype/commit/74e9560c10fcdadb207fea82577946976b9a87da)
+- [Dev Deps] update `@ljharb/eslint-config`, `aud`, `tape` [`63fd269`](https://github.com/ljharb/Iterator.prototype/commit/63fd269da6a0a39f79bc48b887b7ec81b6e5e0a0)
+- [Deps] update `define-properties`, `get-intrinsic` [`ef73f0e`](https://github.com/ljharb/Iterator.prototype/commit/ef73f0e78223e7eb09a987bc0614a802585e376a)
+
 ## [v1.1.0](https://github.com/ljharb/Iterator.prototype/compare/v1.0.1...v1.1.0) - 2022-12-09
 
 ### Commits
