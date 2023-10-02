@@ -1,47 +1,46 @@
-import React, { useRef, FormEvent, ChangeEvent } from 'react';
-import emailjs from "@emailjs/browser";
-import { useNavigate } from 'react-router-dom';
+import React, { useRef, FormEvent, ChangeEvent } from 'react'
+import emailjs from '@emailjs/browser'
+import { useNavigate } from 'react-router-dom'
 
 const Contact: React.FC = () => {
-  const form = useRef<HTMLFormElement | null>(null);
+  const form = useRef<HTMLFormElement | null>(null)
   const navigate = useNavigate()
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (form.current) {
       emailjs
         .sendForm(
-          "service_2vnfyv4",
-          "template_k79gi9s",
+          'service_2vnfyv4',
+          'template_k79gi9s',
           form.current,
-          "fYRG8iBBszp5UxxcS"
+          'fYRG8iBBszp5UxxcS'
         )
-            .then(
-                (result) => {
-                  console.log(result.text);
-                  console.log("message sent");
-        
-                  // Reset the form fields
-                  if (form.current) {
-                    form.current.reset();
-                  }
-        
-                  // Show an alert
-                  // alert("Email sent successfully!");
-                },
-                (error) => {
-                  console.log(error.text);
-                  alert("Email sending failed.");
-                }
-              );
-         navigate('/thanks')
-    }
+        .then(
+          (result) => {
+            console.log(result.text)
+            console.log('message sent')
 
-  };
+            // Reset the form fields
+            if (form.current) {
+              form.current.reset()
+            }
+
+            // Show an alert
+            // alert("Email sent successfully!");
+          },
+          (error) => {
+            console.log(error.text)
+            alert('Email sending failed.')
+          }
+        )
+      navigate('/thanks')
+    }
+  }
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-  };
+    console.log(event.target.value)
+  }
 
   return (
     <>
@@ -49,7 +48,7 @@ const Contact: React.FC = () => {
         <div className="container">
           <div className="container-box">
             <div className="left">
-              <img src="/client/public/photos/inspiration/ready.avif" alt="" />
+              <img src="/photos/inspiration/ready.avif" alt="" />
             </div>
             <div className="right">
               <h3>Register Form</h3>
@@ -93,7 +92,7 @@ const Contact: React.FC = () => {
                   type="string"
                   id="phone"
                   name="phone"
-                //   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  //   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   required
                   placeholder="Please enter your phone number"
                   className="field"
@@ -156,9 +155,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Contact;
-
-
+export default Contact

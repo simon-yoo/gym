@@ -43,7 +43,6 @@ function Header() {
       <nav>
         <div className="navbar">
           <h1>WORLD GYM-</h1>
-          {/* <i className="fa-solid fa-xmark" aria-hidden="true"></i> */}
           <ul className="links">
             <Link to={'/'}>
               <li>HOME</li>

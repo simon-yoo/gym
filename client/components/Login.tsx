@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 const userData = [
   { email: 'yoosghn@gmail.com', password: '1234' },
   { email: 'user@example.com', password: '1234' },
-];
+]
 
 function Login() {
-    const navigate = useNavigate()
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+    e.preventDefault()
 
-    const matchingUser = userData.find((user) => user.email === email && user.password === password);
+    const matchingUser = userData.find(
+      (user) => user.email === email && user.password === password
+    )
 
     if (matchingUser) {
       navigate('/')
-      setError(null); 
+      setError(null)
     } else {
-      setError('Invalid email or password');
+      setError('Invalid email or password')
     }
   }
 
@@ -53,38 +55,7 @@ function Login() {
         </div>
       </form>
     </div>
-  );
+  )
 }
 
-export default Login;
-
-
-
-
-// function Login(){
-
- 
-//     function handleSubmit(e: React.FormEvent<HTMLFormElement>){
-//         e.preventDefault()
-
-//         const form = new FormData(e.currentTarget)
-//         const email = form.get('email')?.valueOf() as string
-//         const password = form.get('password')?.valueOf() as string
-//         console.log('login')
-//     }
-//     return (
-//         <div>
-//             <form onSubmit={handleSubmit} className="login-container">
-//                 <div className="input-container">
-//                 <input id="email" type="text" name="email" placeholder="EMAIL" />
-//                 <input id="password" type="password" name="password" placeholder="PASSWORD"/>
-//                 </div>
-//                 <div className="btn-container">
-//                 <button className="login-btn">Log In</button>
-//                 </div>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default Login
+export default Login

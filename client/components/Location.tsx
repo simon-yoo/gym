@@ -4,10 +4,7 @@ const Location = () => {
       <section className="photos">
         <div className="column-location">
           <h3 className="city">New York</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/newyork.jpeg"
-          />
+          <img className="city-img" src="/photos/location/newyork.jpeg" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Tokyo, USA{' '}
@@ -23,10 +20,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Los Angeles</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/losangeles.avif"
-          />
+          <img className="city-img" src="/photos/location/losangeles.avif" />
 
           <div className="location-details">
             <div>
@@ -43,10 +37,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">California</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/california.avif"
-          />
+          <img className="city-img" src="/photos/location/california.avif" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Los Angeles, USA{' '}
@@ -62,10 +53,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Seoul</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/seoul3.jpeg"
-          />
+          <img className="city-img" src="/photos/location/seoul3.jpeg" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Seoul, USA{' '}
@@ -81,10 +69,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Tokyo</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/tokyo.avif"
-          />
+          <img className="city-img" src="/photos/location/tokyo.avif" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Tokyo, USA{' '}
@@ -100,10 +85,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Singapore</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/singapore.avif"
-          />
+          <img className="city-img" src="/photos/location/singapore.avif" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Singapore, USA{' '}
@@ -119,10 +101,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Paris</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/paris1.jpeg"
-          />
+          <img className="city-img" src="/photos/location/paris1.jpeg" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Paris, USA{' '}
@@ -138,10 +117,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">London</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/london.avif"
-          />
+          <img className="city-img" src="/photos/location/london.avif" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, London, USA{' '}
@@ -157,10 +133,7 @@ const Location = () => {
         </div>
         <div className="column-location">
           <h3 className="city">Madrid</h3>
-          <img
-            className="city-img"
-            src="/client/public/photos/location/madrid.avif"
-          />
+          <img className="city-img" src="/photos/location/madrid.avif" />
           <div className="location-details">
             <div>
               <b>Address:</b> 123 avcd road, Madrid, USA{' '}
@@ -174,7 +147,6 @@ const Location = () => {
             </div>
           </div>
         </div>
-        {/* </div> */}
       </section>
     </>
   )
