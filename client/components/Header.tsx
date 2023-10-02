@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom"
 import Login from "./Login";
+import { useAuth0 } from "@auth0/auth0-react";
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
+import { NavGroup, NavButton } from './Styled'
+
+
 function Header(){
 
     function handleClick(){
@@ -16,6 +21,27 @@ function Header(){
         : 'fa-solid fa-bars';
     }
     }
+    const { user, logout, loginWithRedirect } = useAuth0()
+    if (user) {
+      console.log(user)
+    }
+  
+    const handleSignOut = () => {
+      logout({
+        logoutParams: {
+          returnTo: window.location.origin,
+        },
+      })
+    }
+  
+    const handleSignIn = () => {
+      loginWithRedirect({
+        authorizationParams: {
+          redirect_uri: `${window.location.origin}`,
+        },
+      })
+    }
+  
     return ( <div className="header">
     <nav>
         < div className="navbar">
@@ -27,8 +53,17 @@ function Header(){
                 <Link to={'membership'}><li>Membership</li></Link> 
                 <Link to={'location'}><li>Location</li></Link> 
                 <Link to={'contact'}><li>Contact</li></Link>
+                {/* <NavGroup>
+            <IfAuthenticated>
+          <NavButton className="log-btn" onClick={handleSignOut}>Sign out</NavButton>
+          {user && <p>Signed in as: {user?.email}</p>}
+        </IfAuthenticated>
+        <IfNotAuthenticated>
+          <NavButton className="log-btn" onClick={handleSignIn}>Sign in</NavButton>
+        </IfNotAuthenticated>
+        </NavGroup> */}
             </ul>
-           
+        
             <div className="toggle_btn">
                 <i onClick={handleClick}className="fa-solid fa-bars"></i>
             </div>
@@ -43,6 +78,15 @@ function Header(){
         <Link to={'membership'}><li className="drop-link">Membership</li></Link> 
         <Link to={'location'}><li className="drop-link">Location</li></Link> 
         <Link to={'contact'}><li className="drop-link">Contact</li></Link>
+        {/* <NavGroup>
+            <IfAuthenticated>
+          <NavButton className="log-btn" onClick={handleSignOut}>Sign out</NavButton>
+          {user && <p>Signed in as: {user?.email}</p>}
+        </IfAuthenticated>
+        <IfNotAuthenticated>
+          <NavButton className="log-btn" onClick={handleSignIn}>Sign in</NavButton>
+        </IfNotAuthenticated>
+        </NavGroup> */}
         <Login/>
     </div>
 

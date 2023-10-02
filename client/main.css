@@ -77,6 +77,9 @@ a {
   width: 100%;
 }
 
+.log-btn {
+}
+
 .text-box {
   width: 60%;
   color: #ced4da;
@@ -663,10 +666,18 @@ p {
 }
 
 .photos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+@media (max-width: 2200px) {
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .photos {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .city-img {
@@ -714,12 +725,13 @@ p {
 }
 
 .container {
-  position: relative;
-  display: flex;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 20px 100px;
+  text-align: center;
+  padding: 25px 40px;
 }
 
 .container:after {
@@ -733,11 +745,11 @@ p {
 .container-box {
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 25px 40px;
 }
 
 .left img {
